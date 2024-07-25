@@ -203,7 +203,7 @@ function generate_initial_population(mu::Int64, TT::Matrix{Float64}, DD::Matrix{
                 end
             end
         else
-            cr = change_initial(chrm)
+            cr = change_initial(chrm)由初始可行解经过变换得到的解
             if is_feasibleM(cr)
                 violating_drones = is_feasibleR(cr, DD, TT, dEligible, flying_range, sR, sL, problem_type)
                 if length(violating_drones) == 0
